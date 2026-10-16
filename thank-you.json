@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "contributors": [
+    {
+      "name": "montefridge",
+      "note": "A huge thank-you for creating these weapon models for Polygonal Conflict.",
+      "models": [
+        "PKM",
+        "M16A2",
+        "C7",
+        "AK-47",
+        "AKM",
+        "AK-74",
+        "AK-74M",
+        "RPK",
+        "RPK-74",
+        "M249",
+        "M72",
+        "RPG-7",
+        "G3",
+        "HK33",
+        "PSG1",
+        "FAMAS",
+        "SVD",
+        "FAL",
+        "Galil",
+        "Galatz",
+        "AR-18",
+        "AK-74U"
+      ]
+    }
+  ]
+}

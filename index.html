@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111610">
+  <meta name="description" content="Asset acknowledgements for Polygonal Conflict.">
+  <title>Asset Acknowledgements — Polygonal Conflict</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111610;
+      --panel: #191f18;
+      --panel-2: #202820;
+      --line: #374333;
+      --text: #eef1e9;
+      --muted: #aeb9a7;
+      --olive: #b8c995;
+      --sand: #d4c7a3;
+      --max: 920px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, transparent 49.9%, rgba(184,201,149,.035) 50%, transparent 50.1%),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    a { color: var(--olive); text-underline-offset: 3px; }
+    a:hover { color: #e3edcb; }
+    main { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; padding: 52px 0 76px; }
+    .topline { display:flex; align-items:center; gap:10px; color:var(--olive); font-size:11px; font-weight:750; letter-spacing:.17em; text-transform:uppercase; }
+    .topline::before { content:""; display:block; width:25px; height:2px; background:var(--olive); }
+    h1 { margin:15px 0 10px; font-size:clamp(34px,6vw,56px); line-height:1.05; letter-spacing:-.045em; }
+    .lede { max-width:680px; margin:0; color:var(--muted); }
+    .coordinates { margin-top:29px; padding:14px 17px; border:1px solid var(--line); background:rgba(25,31,24,.8); color:var(--muted); font-size:12px; letter-spacing:.06em; text-transform:uppercase; }
+    .coordinates span { color:var(--sand); }
+    section { margin-top:48px; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:20px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+    h2 { margin:0; font-size:clamp(20px,4vw,27px); line-height:1.2; letter-spacing:-.02em; }
+    .section-tag { color:var(--muted); font-size:11px; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap; }
+    .thanks-panel { margin-top:16px; padding:24px; border:1px solid #586848; border-left:4px solid var(--olive); border-radius:3px; background:linear-gradient(135deg,rgba(184,201,149,.10),rgba(25,31,24,.93) 56%); }
+    .thanks-kicker { color:var(--olive); font-size:11px; font-weight:800; letter-spacing:.18em; }
+    .thanks-panel h3 { margin:5px 0 8px; font-size:clamp(25px,5vw,36px); letter-spacing:.035em; line-height:1.1; }
+    .thanks-intro { margin:0 0 18px; color:var(--muted); }
+    .contributor { padding-top:17px; border-top:1px solid var(--line); }
+    .contributor-name { margin:0; font-size:20px; font-weight:730; }
+    .contributor-note { margin:4px 0 12px; color:var(--muted); }
+    .model-list { display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0; list-style:none; }
+    .model-list li { padding:4px 9px; border:1px solid var(--line); border-radius:2px; background:rgba(13,17,13,.55); color:#dce3d4; font-size:12px; }
+    .asset-grid { display:grid; gap:12px; margin-top:16px; }
+    .asset { padding:20px 22px; border:1px solid var(--line); border-radius:3px; background:var(--panel); }
+    .asset h3 { margin:0 0 13px; font-size:19px; }
+    .meta { display:grid; grid-template-columns:118px minmax(0,1fr); gap:7px 14px; margin:0; }
+    .meta dt { color:var(--muted); }
+    .meta dd { margin:0; overflow-wrap:anywhere; }
+    .empty { padding:17px; border:1px dashed var(--line); color:var(--muted); }
+    footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+    .status { min-height:1.5em; margin-top:16px; color:var(--muted); font-size:13px; }
+    @media (max-width:580px) {
+      main { padding-top:34px; }
+      .section-head { align-items:start; flex-direction:column; gap:4px; }
+      .meta { grid-template-columns:1fr; gap:1px; }
+      .meta dt { margin-top:9px; font-size:12px; }
+      .asset,.thanks-panel { padding:17px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="topline">Polygonal Conflict <span aria-hidden="true">/</span> Credits</div>
+    <h1>Asset acknowledgements</h1>
+    <p class="lede">A record of the artists and community-created assets that help shape Polygonal Conflict.</p>
+    <div class="coordinates">Project file <span>PC / 001</span> &nbsp;·&nbsp; Section <span>Credits</span> &nbsp;·&nbsp; Record <span>Public</span></div>
+  </header>
+
+  <section aria-labelledby="thanks-heading">
+    <div class="section-head">
+      <h2 id="thanks-heading">Contributors</h2>
+      <span class="section-tag">Original and commissioned work</span>
+    </div>
+    <div id="thanks" class="thanks-panel" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="assets-heading">
+    <div class="section-head">
+      <h2 id="assets-heading">Third-party assets</h2>
+      <span class="section-tag">Attribution and license record</span>
+    </div>
+    <div id="assets" class="asset-grid" aria-live="polite"></div>
+  </section>
+
+  <div id="status" class="status" role="status"></div>
+  <footer>
+    Credits are provided for attribution. They do not imply sponsorship or endorsement by the credited creators.
+  </footer>
+</main>
+<script>
+  const esc = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+  const link = (label, url) => url
+    ? '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + '</a>'
+    : esc(label);
+  const row = (label, value) => value
+    ? '<dt>' + esc(label) + '</dt><dd>' + value + '</dd>'
+    : "";
+
+  async function loadCredits() {
+    try {
+      const [thanksResponse, creditsResponse] = await Promise.all([
+        fetch("./thank-you.json", { cache: "no-store" }),
+        fetch("./third-party-credits.json", { cache: "no-store" })
+      ]);
+      if (!thanksResponse.ok || !creditsResponse.ok) throw new Error("Could not load the credit data files.");
+      const [thanksData, creditsData] = await Promise.all([thanksResponse.json(), creditsResponse.json()]);
+
+      const contributors = Array.isArray(thanksData.contributors) ? thanksData.contributors : [];
+      document.querySelector("#thanks").innerHTML =
+        '<div class="thanks-kicker">With enormous thanks</div>' +
+        '<h3>THANK YOU SO MUCH</h3>' +
+        '<p class="thanks-intro">To the creators whose work helps bring this project to life.</p>' +
+        (contributors.length ? contributors.map((person) =>
+          '<article class="contributor"><p class="contributor-name">' + esc(person.name) + '</p>' +
+          (person.note ? '<p class="contributor-note">' + esc(person.note) + '</p>' : '') +
+          (Array.isArray(person.models) && person.models.length
+            ? '<ul class="model-list">' + person.models.map((model) => '<li>' + esc(model) + '</li>').join("") + '</ul>'
+            : '') + '</article>'
+        ).join("") : '<div class="empty">Contributor credits will be added here.</div>');
+
+      const assets = Array.isArray(creditsData.assets) ? creditsData.assets : [];
+      document.querySelector("#assets").innerHTML = assets.length ? assets.map((asset) => {
+        const license = asset.license || {};
+        const details = [
+          row("Creator", link(asset.creator, asset.creatorUrl)),
+          row("Source", link(asset.sourceLabel || "Sketchfab model page", asset.sourceUrl)),
+          row("License", link(license.name, license.url)),
+          row("Changes", esc(asset.changes))
+        ].filter(Boolean).join("");
+        return '<article class="asset"><h3>' + esc(asset.title) + '</h3><dl class="meta">' + details + '</dl></article>';
+      }).join("") : '<div class="empty">Third-party asset credits will be added here.</div>';
+
+      document.querySelector("#status").textContent = "";
+    } catch (error) {
+      document.querySelector("#status").textContent =
+        "Credit data could not be loaded. Check that the two JSON files are in the same folder as index.html.";
+    }
+  }
+  loadCredits();
+</script>
+</body>
+</html>
